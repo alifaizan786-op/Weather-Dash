@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <section class="sidebar">
+            <section class="userinput">
+                <h2>Search For a City:</h2>
+                <input id="cityName" type="text">
+                <button class="saveBtn btn" ><i class="fas fa-search"></i></button>
+            </section>
+            <section class="savedButton">
+                <ul>
+                    <li>
+                        <button>Decatur</button>
+                    </li>
+                    <li>
+                        <button>Decatur</button>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="report">
+                <div class="maininfo">
+                    <h2 id="location"></h2>
+                    <ul>
+                        <li>
+                            Temperature:<span id="temp"></span>
+                        </li>
+                        <li>
+                            Humidity: <span id="humi"></span>
+                        </li>
+                        <li>
+                            Wind Speed: <span id="wind"></span>
+                        </li>
+                        <li>
+                            UV Index: <span id="UV"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="forecast">
+                    <h2>5-Day Forecast</h2>
+                    <ul>
+                        <li>
+                            date<br>
+                            icon<br>
+                            temp<br>
+                            humi<br>
+                        </li>
+                        <li>
+                            date<br>
+                            icon<br>
+                            temp<br>
+                            humi<br>
+                        </li>
+                        <li>
+                            date<br>
+                            icon<br>
+                            temp<br>
+                            humi<br>
+                        </li>
+                        <li>
+                            date<br>
+                            icon<br>
+                            temp<br>
+                            humi<br>
+                        </li>
+                        <li>
+                            date<br>
+                            icon<br>
+                            temp<br>
+                            humi<br>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+    </main>
+
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./assets/JS/main.js"></script>
+
+</html>

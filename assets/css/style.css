@@ -1,0 +1,100 @@
+
+header {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+header h1 {
+    padding: 15px ;
+}
+
+main {
+    display: flex;
+}
+
+.sidebar{
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.15) 
+}
+
+.report {
+    width: 70%;
+    padding: 15px;
+}
+
+.maininfo {
+    border: 1px solid ;
+    height: 50vh;
+    padding: 15px;
+}
+
+.maininfo li {
+    font-size: 20px;
+    padding: 25px;
+}
+
+.userinput {
+    padding: 15px;
+}
+
+.userinput h2 textarea button {
+    padding: 5px;
+}
+
+.userinput button {
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.savedButton button {
+    padding : 5px;
+    color: white;
+    width: 75%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 15px;
+}
+
+
+.savedButton{
+    padding: 5px;
+}
+
+ul  {
+    padding-left: 15px;
+}
+
+.savedButton li {
+    padding-bottom: 10px;
+
+}
+
+.forecast ul {
+    display: flex;
+
+}
+
+.forecast li {
+    margin: 5px;
+    width: 60%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.forecast {
+    padding-top: 25px;
+}
+
+.forecast ul {
+    padding-top: 25px;
+}
+
+.forecast li {
+    background :rgba(0,212,255,1);
+}
+
