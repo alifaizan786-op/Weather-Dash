@@ -16,7 +16,7 @@ main {
 }
 
 .sidebar{
-    width: 30%;
+    width: 15vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.15) 
 }
