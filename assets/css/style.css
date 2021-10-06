@@ -65,6 +65,13 @@ main {
     padding: 5px;
 }
 
+#location {
+    padding-left: 40px;
+    font-size: 41px;
+    text-transform: capitalize;
+
+}
+
 ul  {
     padding-left: 15px;
 }
@@ -96,5 +103,11 @@ ul  {
 
 .forecast li {
     background :rgba(0,212,255,1);
+    padding: 25px 0px ;
+}
+
+#UV {
+    border-radius: 2px;
+    padding: 2px ;
 }
 
