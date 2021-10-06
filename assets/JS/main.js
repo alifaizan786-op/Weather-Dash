@@ -6,14 +6,22 @@ var curHumid = $("#humi")
 var curWind = $("#wind")
 var curUV = $("#UV")
 var curDate = $("#date")
-var searchedCities = JSON.parse(localStorage.getItem("searchedCities"));
+var searchedCities = JSON.parse(localStorage.getItem("searchedCities")) || []
 var searchedCitiesArr = []
+
+
 
 searchButton.on("click",function(){
     searchedCitiesArr.push(userCity.val())
     localStorage.setItem("searchedCities", JSON.stringify(searchedCitiesArr))
     forecastData()
 })
+
+function makebuttons (){
+    for ( var i = 0; i > searchedCities.length; i++){
+         $(".savedButton").html( '<li><button id="' + searchedCities[i] + '">' + searchedCities[i] + '</button></li>' )
+    }
+}
 
 function forecastData(){
     let api1 =
