@@ -7,26 +7,40 @@ var curWind = $("#wind")
 var curUV = $("#UV")
 var curDate = $("#date")
 var searchedCities = JSON.parse(localStorage.getItem("searchedCities")) || []
-var searchedCitiesArr = []
+var cityName = ""
+
 
 
 
 searchButton.on("click",function(){
-    searchedCitiesArr.push(userCity.val())
-    localStorage.setItem("searchedCities", JSON.stringify(searchedCitiesArr))
+    searchedCities.push(userCity.val())
+    localStorage.setItem("searchedCities", JSON.stringify(searchedCities))
+    cityName = userCity.val()
+    console.log(cityName)
     forecastData()
+    makeButtons()
 })
 
-function makebuttons (){
-    for ( var i = 0; i > searchedCities.length; i++){
-         $(".savedButton").html( '<li><button id="' + searchedCities[i] + '">' + searchedCities[i] + '</button></li>' )
+
+
+function makeButtons() {
+    var buttons = ''
+    for (var i = 0 ; i < searchedCities.length; i++){
+        buttons += '<button id="' + searchedCities[i] + '">' + searchedCities[i] + '</button>'
     }
-}
+    $(".savedButton").html(buttons)
+};
+
+$(".savedButton").on('click', function(event){
+    console.log(event.target.id)
+    cityName = event.target.id
+    forecastData()
+})
 
 function forecastData(){
     let api1 =
         "https://api.openweathermap.org/data/2.5/weather?q=" +
-        userCity.val() +
+        cityName +
         "&units=imperial&appid=a2eb597d271dbead6179a99d9d6c31da";
 
     $.ajax({
@@ -52,7 +66,7 @@ function forecastData(){
 
             // Current Temperature
             console.log(moment.unix(data2.current.dt).format("M/DD/YYYY"))
-            curlocation.text(userCity.val() +"  " + moment.unix(data2.current.dt).format("M/DD/YYYY"))
+            curlocation.text(cityName +"  " + moment.unix(data2.current.dt).format("M/DD/YYYY"))
             curTemp.text(data2.current.temp)
             curHumid.text(data2.current.humidity)
             curWind.text(data2.current.wind_speed)
